@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19142.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Jka-Sv-O2J">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19129"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BaseVC-->
+        <scene sceneID="JcM-ek-xIK">
+            <objects>
+                <viewController id="MDO-cd-Ace" customClass="ViewController" customModule="UISheetPresentationControllerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1YG-I2-xb5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="5" translatesAutoresizingMaskIntoConstraints="NO" id="AWz-DQ-sJH">
+                                <rect key="frame" x="41.5" y="108" width="331" height="248.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="S9g-bf-wvJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="331" height="248.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jd4-YC-Yxg">
+                                                <rect key="frame" x="0.0" y="0.0" width="331" height="248.5"/>
+                                                <imageReference key="image" image="wwdc-2019-06-06.png"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="MRl-JU-giP" firstAttribute="height" secondItem="jd4-YC-Yxg" secondAttribute="height" id="53Y-C4-M1O"/>
+                                    <constraint firstAttribute="width" secondItem="AWz-DQ-sJH" secondAttribute="height" multiplier="4:3" id="8hg-6K-cFW"/>
+                                    <constraint firstItem="MRl-JU-giP" firstAttribute="width" secondItem="jd4-YC-Yxg" secondAttribute="width" id="9bD-5n-bJB"/>
+                                    <constraint firstItem="S9g-bf-wvJ" firstAttribute="centerY" secondItem="AWz-DQ-sJH" secondAttribute="centerY" id="Ekz-Vi-jxZ"/>
+                                    <constraint firstItem="S9g-bf-wvJ" firstAttribute="top" secondItem="rHD-do-FOP" secondAttribute="top" id="MIn-sg-nx1"/>
+                                    <constraint firstItem="S9g-bf-wvJ" firstAttribute="centerX" secondItem="AWz-DQ-sJH" secondAttribute="centerX" id="Tec-bR-0YR"/>
+                                    <constraint firstItem="S9g-bf-wvJ" firstAttribute="trailing" secondItem="rHD-do-FOP" secondAttribute="trailing" id="eqW-CT-Giy"/>
+                                    <constraint firstItem="S9g-bf-wvJ" firstAttribute="bottom" secondItem="rHD-do-FOP" secondAttribute="bottom" id="q8n-nF-f8T"/>
+                                    <constraint firstItem="S9g-bf-wvJ" firstAttribute="leading" secondItem="rHD-do-FOP" secondAttribute="leading" id="yyj-Lp-MYE"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="rHD-do-FOP"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="MRl-JU-giP"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MDO-cd-Ace" id="TeR-G3-wqW"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6hK-gc-zAI"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AWz-DQ-sJH" firstAttribute="top" secondItem="6hK-gc-zAI" secondAttribute="top" constant="20" id="bb6-qF-iXQ"/>
+                            <constraint firstItem="AWz-DQ-sJH" firstAttribute="centerX" secondItem="6hK-gc-zAI" secondAttribute="centerX" id="cLg-XR-C8B"/>
+                            <constraint firstItem="AWz-DQ-sJH" firstAttribute="width" secondItem="1YG-I2-xb5" secondAttribute="width" multiplier="0.8" id="rOv-vJ-2ku"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="BaseVC" id="usO-84-1YH">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="action" id="QA8-un-4xb">
+                                <connections>
+                                    <action selector="ShowWebView:" destination="MDO-cd-Ace" id="AWi-lf-FYv"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="add" id="MBD-cS-0A3">
+                                <connections>
+                                    <action selector="ChangeImage:" destination="MDO-cd-Ace" id="J88-0x-MOk"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="showImageView" destination="jd4-YC-Yxg" id="Y1f-js-jjr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BGj-iP-kvx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1881.1594202898552" y="-157.36607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Eyn-TP-KjE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Jka-Sv-O2J" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hVb-IP-DPM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MDO-cd-Ace" kind="relationship" relationship="rootViewController" id="pEb-M5-kBI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXe-TF-0M8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971.01449275362324" y="-157.36607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="wwdc-2019-06-06.png" width="512" height="512"/>
+    </resources>
+</document>
