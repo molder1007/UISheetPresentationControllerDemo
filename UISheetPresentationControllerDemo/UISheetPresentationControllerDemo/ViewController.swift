@@ -64,7 +64,7 @@ extension ViewController: PHPickerViewControllerDelegate {
             // prefersScrollingExpandsWhenScrolledToEdge 屬性可以避免這問題
             sheet.prefersScrollingExpandsWhenScrolledToEdge = false
             // sheetPresentationController 可客制圓角大小
-            sheet.preferredCornerRadius = 100
+            sheet.preferredCornerRadius = 10
             // 以下兩項是在 device orientation left or right 才看得出來
 //            sheet.prefersEdgeAttachedInCompactHeight = true
 //            sheet.widthFollowsPreferredContentSizeWhenEdgeAttached = true
